@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int
+main ()
+{
+  //printf("Hello World");
+  int n, mi = 0, mf = 0;
+  scanf ("%d", &n);
+  int a[n], i;
+  for (i = 0; i < n; i++)
+    {
+      scanf ("%d", &a[i]);
+    }
+  for (i = 0; i < n; i++)
+    {
+      mi = mi + a[i];
+      if (mi < 0)
+	{
+	  mi = 0;
+	}
+      else if (mf < mi)
+	{
+	  mf = mi;
+	}
+
+    }
+  printf ("%d", mf);
+  return 0;
+}
